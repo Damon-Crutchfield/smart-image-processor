@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+__pycache__/ 
 *.py[cod]
 *$py.class
 
@@ -169,3 +169,35 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+
+# Output files and examples
+examples/
+detected_objects.jpg
+enhanced_image.jpg
+faces_detected.jpg
+extracted_text.txt
+
+# Flask
+*.db
+
+# Machine Learning Models
+*.h5
+*.pkl
+*.onnx
+*.pt
