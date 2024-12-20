@@ -1,32 +1,29 @@
 # Smart Image Processor
 
-**A Python-powered image processing tool that enhances images, detects objects, recognizes faces, extracts text, and applies custom filters.**
+**A Python-powered tool to enhance images, detect objects, recognize faces, extract text, and apply custom filters. Built for both personal and professional use, with optional REST API integration.**
 
 ## Features
 
 1. **Image Enhancement**
-   - Automatic brightness, contrast, and color adjustments.
-   - Noise reduction and sharpening filters.
+   - Automatically adjust brightness, contrast, and sharpness.
+   - Apply artistic filters like grayscale and sepia.
 
 2. **Object Detection**
-   - Detect objects in images using pre-trained YOLO models.
-   - Draw bounding boxes around detected objects with labels.
+   - Detect objects using pre-trained YOLO models.
+   - Draw bounding boxes and label detected objects.
 
 3. **Facial Recognition**
-   - Identify and highlight faces in images.
-   - Optional: Blur or replace faces for privacy concerns.
+   - Highlight faces in images.
+   - Optional: Blur or mask faces for privacy.
 
 4. **OCR (Optical Character Recognition)**
    - Extract text from images using Tesseract OCR.
-   - Export extracted text to a file.
+   - Export text to a `.txt` file.
 
-5. **Custom Filters**
-   - Apply artistic filters like grayscale, sepia, and cartoon effects.
+5. **Batch Processing**
+   - Resize and reformat multiple images simultaneously.
 
-6. **Batch Processing**
-   - Resize and format multiple images in one go.
-
-7. **Optional REST API**
+6. **Optional REST API**
    - Upload and process images via an API built with Flask.
 
 ---
@@ -34,12 +31,12 @@
 ## Tech Stack
 
 - **Programming Language**: Python
-- **Libraries**:
-  - OpenCV: For image processing and analysis.
+- **Core Libraries**:
+  - OpenCV: For image processing and object detection.
   - Pillow: For image enhancement and manipulation.
   - pytesseract: For OCR functionality.
-  - Flask: For optional API integration.
-  - PyTorch/TensorFlow: For AI-driven object detection (optional).
+  - Flask: For REST API integration.
+  - YOLO: For object detection models.
 
 ---
 
@@ -47,8 +44,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ImageProcessor.git
-   cd ImageProcessor
+   git clone https://github.com/yourusername/smart-image-processor.git
+   cd smart-image-processor
    ```
 
 2. Set up a virtual environment:
@@ -57,7 +54,7 @@
    source venv/bin/activate   # On Windows: venv\Scripts\activate
    ```
 
-3. Install the required dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -94,7 +91,7 @@
    ```bash
    flask run
    ```
-2. Use a tool like Postman to send requests to the API endpoint:
+2. Use a tool like Postman to send a request to the API endpoint:
    ```
    POST http://127.0.0.1:5000/process-image
    Body: Form-data (key: 'file', value: [your image file])
@@ -106,18 +103,18 @@
 
 | Feature           | Example Output |
 |-------------------|----------------|
-| **Enhanced Image**| ![enhanced_image](examples/enhanced_image.jpg) |
-| **Object Detection** | ![detected_objects](examples/detected_objects.jpg) |
-| **Facial Recognition** | ![faces_detected](examples/faces_detected.jpg) |
+| **Enhanced Image**| ![Enhanced Image](examples/enhanced_image.jpg) |
+| **Object Detection** | ![Object Detection](examples/detected_objects.jpg) |
+| **Facial Recognition** | ![Facial Recognition](examples/faces_detected.jpg) |
 | **Text Extraction** | Extracted text saved to `extracted_text.txt`. |
 
 ---
 
 ## Future Enhancements
 
-- Add cloud deployment for scalability.
-- Integrate advanced AI features like segmentation and pose estimation.
+- Add advanced AI features like segmentation and pose estimation.
 - Include a user-friendly GUI using Tkinter or PyQt.
+- Deploy the API to cloud platforms for broader accessibility.
 
 ---
 
@@ -149,6 +146,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - **OpenCV** for image processing.
-- **Pillow** for image manipulation.
-- **Tesseract** for OCR capabilities.
+- **Pillow** for image enhancement.
+- **Tesseract OCR** for text extraction.
 - **YOLO** for object detection models.
